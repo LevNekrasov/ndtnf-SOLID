@@ -2,13 +2,13 @@ import Book from "./interfaces/Book";
 
 export default abstract class BooksRepository{
     
-    abstract createBook(book: Book): void;
+    abstract createBook(book: any): Promise<any>;
     
-    abstract getBook(id: string): Book | undefined;
+    abstract getBook(id: string): Promise<any>;
     
-    abstract getBooks(): Book[];
+    abstract getBooks(): Promise<any>;
     
-    abstract updateBook(id: string): void;
+    abstract updateBook(id: string, book: any): Promise<any>;
     
-    abstract deleteBook(id: string): void;
+    abstract deleteBook(id: string): Promise<any>;
 }
